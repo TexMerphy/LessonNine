@@ -7,10 +7,10 @@ public class Main {
         {"1", "7", "3", "5"},
         {"0", "2", "8", "6"}
     };
-    static void arrSize(int lenght){
-        if (lenght != 4) {
-            String message = String.format("Array must be 4x4!")
-            throw new MyArraySizeException(message, e);
+
+    static void arrSize(String i [][]) {
+        if (i.length != 4) {
+            throw new MyArraySizeException(message);
         }
     }
     static int sumArr(String[][] nums) {
@@ -19,5 +19,9 @@ public class Main {
             String[] strings = val[i];
 
         }
+    }
+
+    public static void main(String[] args) {
+        arrSize();
     }
 }
