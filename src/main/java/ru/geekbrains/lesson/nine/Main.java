@@ -24,4 +24,17 @@ public class Main {
     public static void main(String[] args) {
         arrSize();
     }
+
+    public static class MyArraySizeException extends RuntimeException{
+        public MyArraySizeException(String message) {
+            super(message);
+            message = "Array must be 4x4!";
+        }
+    }
+    public class MyArrayDataException extends RuntimeException{
+        public MyArrayDataException(String message, Throwable cause) {
+            super(message, cause);
+            message = "Array must be 4x4!";
+        }
+    }
 }
